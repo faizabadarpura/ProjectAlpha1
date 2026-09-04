@@ -24,4 +24,5 @@ public class PlayerHunger : MonoBehaviour
         Hunger = Mathf.Clamp(Hunger, 0, 100);
         Debug.Log("Hunger: " + Hunger);
     }
+    //test comment
 }

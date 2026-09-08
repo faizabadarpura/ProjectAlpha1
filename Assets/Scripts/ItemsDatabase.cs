@@ -13,6 +13,14 @@ public class ItemsDatabase : MonoBehaviour
         items.Add(employeeBadge);
         Item coffee = new Item("Coffee", "coffee", "Drinks", "It's a coffee.", true, false, true, true, true, true);
         items.Add(coffee);
+        Item icedCoffee = new Item("Iced Coffee", "iced_coffee", "Drinks", "It'a an iced coffee.", true, false, true, true, true, true);
+        items.Add(icedCoffee);
+        Item coffeeMug = new Item("Coffee Mug", "coffee_mug", "Objects", "An empty mug.", true, false, false, true, false, false);
+        items.Add(coffeeMug);
+        Item proteinBar = new Item("Protein Bar", "protein_bar", "Snacks", "Protein Bars help relieve a good amount of hunger. However, eating too many can make you feel sick.", true, true, true, true, true, false);
+        items.Add(proteinBar);
+        Item workLaptop = new Item("Work Laptop", "work_laptop", "Main Items", "This is your work laptop. Use this to track your employee stats and to get some work done.", false, false, false, false, false, false);
+        items.Add(workLaptop);
     }
 
     void Start()

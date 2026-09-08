@@ -9,10 +9,15 @@ public class ItemsDatabase : MonoBehaviour
     {
         // Create your game's item definitions here
         // Add them to items
-        Item employeeid = new Item("Employee Badge", "employee_badge", "Main Items", "This is your Employee Badge. You must use this to come into the office or access certain employee restricted areas.", false, false, false, false, false, false);
-        items.Add(employeeid);
+        Item employeeBadge = new Item("Employee Badge", "employee_badge", "Main Items", "This is your Employee Badge. You must use this to come into the office or access certain employee restricted areas.", false, false, false, false, false, false);
+        items.Add(employeeBadge);
         Item coffee = new Item("Coffee", "coffee", "Drinks", "It's a coffee.", true, false, true, true, true, true);
         items.Add(coffee);
+    }
+
+    void Start()
+    {
+        Item coffee = GetItemById("coffee");
     }
 
     public Item GetItemById(string id)
@@ -23,6 +28,7 @@ public class ItemsDatabase : MonoBehaviour
         foreach (Item item in items){
             if (item.Id == id)
             {
+                Debug.Log(item.Description);
                 return item;
             }
         }

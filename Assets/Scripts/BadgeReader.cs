@@ -27,7 +27,10 @@ public class BadgeReader : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-           door.GrantDoorAccess();
+           int accesslevel = door.GrantDoorAccess();
+            if (accesslevel > 0) {
+                door.OpenDoor();            
+            }
         }
     }
 }

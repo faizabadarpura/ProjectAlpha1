@@ -319,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.22, y: 3.78, z: -11.64}
+  m_LocalPosition: {x: 3.3, y: 3.78, z: -11.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -618,7 +618,7 @@ Transform:
   m_GameObject: {fileID: 1459926002}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.42755994, y: -0.167, z: -0.41985035}
+  m_LocalPosition: {x: -0.428, y: -0.167, z: -0.41985035}
   m_LocalScale: {x: 0.120000005, y: 0.060000002, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -845,6 +845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorAccess
   badgeReader: {fileID: 1459926007}
   inventory: {fileID: 0}
+  closeDelay: 3
   openOffset: {x: 3, y: 0, z: 0}
 --- !u!1 &1943799369
 GameObject:
@@ -863,6 +864,7 @@ GameObject:
   - component: {fileID: 1943799376}
   - component: {fileID: 1943799377}
   - component: {fileID: 1943799378}
+  - component: {fileID: 1943799379}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -986,8 +988,8 @@ Transform:
   m_GameObject: {fileID: 1943799369}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.66, y: 0.9, z: -2.88}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.66, y: 1.74, z: -2.88}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1045,6 +1047,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   itemsDatabase: {fileID: 817677006}
+--- !u!114 &1943799379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943799369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d0a803266f807459f464c62e8c972f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMoney
+  money: 1574.6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

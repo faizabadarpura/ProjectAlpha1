@@ -2,16 +2,35 @@ using UnityEngine;
 
 public class TakeItem : MonoBehaviour
 {
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    [SerializeField] private string itemId;
+    [SerializeField] private ItemsDatabase itemsDatabase;
+    [SerializeField] private PlayerInventory inventory;
+    private bool playerInRange = false;
     void Update()
     {
-        
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            PickUp(inventory);
+        }
+    }
+    public void PickUp(PlayerInventory playerInventory)
+    {
+        Item item = itemsDatabase.GetItemById(itemId);
+
+        if (item != null)
+        {
+            playerInventory.AddItem(item);
+
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+            Debug.Log("Press E to take.");
+        }
     }
 }

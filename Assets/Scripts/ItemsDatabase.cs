@@ -38,7 +38,7 @@ public class ItemsDatabase : MonoBehaviour
         foreach (Item item in items){
             if (item.Id == id)
             {
-                Debug.Log(item.Description);
+                //Debug.Log(item.Description);
                 return item;
             }
         }

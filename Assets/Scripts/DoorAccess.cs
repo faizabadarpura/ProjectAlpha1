@@ -41,7 +41,6 @@ public class DoorAccess : MonoBehaviour
         if (badgeReader.GrantRestrictedAccess() == true)
         {
             Debug.Log("Access 2");
-            
             return 2;//for basic badge
         }
         else if (badgeReader.GrantBasicAccess() == true)

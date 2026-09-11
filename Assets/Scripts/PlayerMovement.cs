@@ -31,9 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 movement =
-            (Vector3.right * horizontal) +
-            (Vector3.forward * vertical);
+        Vector3 movement = transform.right * horizontal + transform.forward * vertical;
 
         rb.MovePosition(
             rb.position + movement * speed * Time.fixedDeltaTime
